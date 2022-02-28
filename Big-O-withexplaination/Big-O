@@ -1,0 +1,121 @@
+Big O(n)
+---------
+---------
+constant need to ignore 
+
+Orders of Growth
+
+O(1) constant <= Best case
+O(log n) Logarithmic
+O(n) Linear
+O(n log n) Linearithmic
+O(n^2) Quadratic
+O(n^3) Cubic
+O(2^n) Exponential
+O(n!) Factorial <= Worst Case
+
+O(n^2)
+------
+
+function square(n) {
+	for(let i=0; i<n; i++) {
+	 	for(let j=0;j<n; j++) {
+	 		console.log(i,j)
+	 	}
+	}
+}
+
+square(4);
+it create 4 by 4 matrix 
+vol 4*4
+
+O(4^2)
+
+i.e O(n^2)
+
+
+O(n^3)
+--------
+
+
+function cube(n) {
+	for (let i=0; i<n; i++) {
+	 	for (let j=0;j<n; j++) {
+	 		for (let k=0;k<n; k++) {
+	 		    console.log(i,j,k)
+	 		}
+	 	}
+	}
+}
+
+cube(4);
+
+L*B*H 
+
+4^3  = 64 
+
+
+O(log n)
+----------
+
+i:e number^number = some 
+				   number?		
+ ? 
+ 	= 8	 			   
+?
+
+ ? 
+ 	= 8
+2
+
+Log  8 = 3
+   2
+
+//Recursive is mostly O(log n)
+
+   
+function lonFunc(n) {
+	if (n == 0) return "Done";
+	n = Math.floor(n / 2);
+	return logFunc(n);
+}
+
+//not recursive
+
+function logn(n) {
+	while (n > 1) {
+		n = Math.floor(n/2);
+	}
+}
+
+O(log 8) = O(log2 ^8) = 2? = 8
+
+
+
+What Is Binary Search?
+
+a) sorted order array
+b) find the midpoint
+
+O(n log n)
+----------
+
+function nLogNFun(n) {
+	y = n;
+	while(n > 1) {
+		for(i =0 ; i<=y; i++) {
+			 console.log(i);
+		}
+
+	}
+}
+
+O(log 2 ^ 4 )
+
+Log 2^4  = 2
+
+2^2 =4
+
+i:e O(n log n )
+
+
