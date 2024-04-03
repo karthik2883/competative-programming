@@ -133,6 +133,7 @@ polymorphism :-
 """
 
 
+
 # class Student:
 #     # def __init__(self):
 #     #     pass
@@ -190,7 +191,7 @@ polymorphism :-
 Create Account class with 2 attributes - balance & account nno.
 Create Methods for debit, Credit & printing the balance
 
-"""
+
 
 class Bank:
     def __init__(self, balance, account):
@@ -209,3 +210,53 @@ bk.credit(50)
 bk.printing()
 bk.debit(5)
 bk.printing()
+
+
+class Car:
+    @staticmethod
+    def start():
+        print("car started")
+    @staticmethod
+    def stop():
+        print("car stoped")
+
+class Toyota(Car):
+    def __init__(self, brand):
+        self.brand = brand
+        print("Your Brand ", self.brand)
+    def __color(self,color):
+        self.color = color
+        print("Alloted color",self.color)
+    def allot(self,allot_color):
+        self.__color(allot_color)
+
+class Fortuner(Toyota):
+    def __init__(self,type):
+        self.type = type
+        print("Your Brand Type", self.type)
+
+car1 = Fortuner("A")
+car1.allot("blue")
+
+
+
+class Marks:
+    def __init__(self,math,phy,che):
+        self.math = math
+        self.phy = phy
+        self.che = che
+
+    @property
+    def percentage(self):
+      return str((self.math + self.phy + self.che) /3)+"%"
+
+
+m1 = Marks(45,12,52)
+print(m1.percentage)
+m1.phy = 55
+print(m1.percentage)
+
+
+@getter @setter
+
+"""
