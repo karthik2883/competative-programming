@@ -9,7 +9,6 @@ def BubbleSort(a):
             if not swapped:
                 break
 
-
 a = [45, 1, 12, 121]
 BubbleSort(a)
 print(a)
