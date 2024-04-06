@@ -1,0 +1,1 @@
+def BinarySearch(arr,target):
