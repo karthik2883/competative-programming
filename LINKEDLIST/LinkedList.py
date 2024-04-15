@@ -30,8 +30,7 @@ class LinkedList:
             # node = Node(i, self.head)
             # self.head = node
            self.insert_at_beginning(i)
-    def insert_at(self):
-
+   
 if __name__ == '__main__':
     ll = LinkedList()
     ll.insert_values([45,33,334,332,234])
