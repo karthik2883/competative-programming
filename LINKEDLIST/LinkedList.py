@@ -72,7 +72,6 @@ class LinkedList:
             itr = itr.next
         print(llstr)
 
-
     def insert_values(self, data):
         self.head = None
         for i in data:
@@ -80,28 +79,51 @@ class LinkedList:
             # self.head = node
             self.insert_at_beginning(i)
 
-
     def insert_after_value(self, data_after, data_to_insert):
-        pass
+        if self.head is None:
+            return
+        ltr = self.head
+        while ltr:
+            if ltr.next.data == data_after:
+                node = Node(data_to_insert, ltr.next)
+                ltr.next = node
+                print(ltr.next.data, ltr.next.next.data)
+                return 
+
+            ltr = ltr.next
 
         # Search for first occurance of data_after value in linked list
         # Now insert data_to_insert after data_after node
 
-
     def remove_by_value(self, data):
-        pass
-        # Remove first node that contains data
+        if self.head is None:
+            return
+
+        if self.head.data == data:
+            self.head = self.head.next
+            return
+
+        itr = self.head
+        while itr.next:
+            if itr.next.data == data:
+                itr.next = itr.next.next
+                break
+            itr = itr.next
+        # print(count)
 
 
 if __name__ == '__main__':
     ll = LinkedList()
     ll.insert_values([45, 33, 334, 332, 234])
-    ll.insert_at_end(43)
-    ll.insert_at_end(444)
-    ll.insert_at_end(44)
-    ll.insert_at_end(434)
-    ll.insert_at(6, 28)
+    # ll.insert_at_end(43)
+    # ll.insert_at_end(4433)
+    # ll.insert_at_end(45)
+
+    # ll.insert_at(6, 28)
     ll.print()
-    ll.remove_at(5)
+    # ll.remove_at(5)
+
+    # print(ll.get_length())
+    # ll.remove_by_value(234)
+    ll.insert_after_value(332, 88)
     ll.print()
-    print(ll.get_length())
