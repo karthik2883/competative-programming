@@ -41,7 +41,7 @@ def merge_sort(arr):
 def merge(left, right):
     i, j = 0, 0
     result = []
-    while i < left and j < right:
+    while i < len(left) and j < len(right):
         if left[i] < right[j]:
             result.append(left[i])
             i += 1
@@ -49,6 +49,9 @@ def merge(left, right):
             result.append(right[j])
             j += 1
 
-    result.extend((left[i:])
+    result.extend(left[i:])
     result.extend(right[j:])
     return result
+
+arr = [553,45,4541,5,54,1,5,155]
+print(merge_sort(arr))
