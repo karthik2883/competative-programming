@@ -14,10 +14,6 @@ def QuickSort(a):
 
     return QuickSort(lower) +[pivot]+ QuickSort(greater)
 
-
-
-
-
 l = [1,2,0]
 print(QuickSort(l))
 #nlog(n)_
