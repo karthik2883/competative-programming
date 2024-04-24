@@ -9,8 +9,8 @@ def BubbleSort(a):
             if not swapped:
                 break
 
-a = [45, 1, 12, 121]
-BubbleSort(a)
-print(a)
+arr = [32,34,3,23,4,5,5,7,55,3]
+BubbleSort(arr)
+print(arr)
 
 
