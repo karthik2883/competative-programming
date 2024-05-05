@@ -20,6 +20,6 @@ def longest_substring_memo(s, start=0, end=0, memo={}):
     return memo[(start, end)]
 
 # Test
-s = "abcabcbb"
+s = "pwwkew"
 length, sequence = longest_substring_memo(s)
 print(f"Length of the longest substring: {length}, Sequence: {sequence}")  # Output: Length of the longest substring: 3, Sequence: abc
