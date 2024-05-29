@@ -7,7 +7,7 @@ def group_anagrams(words):
         sorted_word = ''.join(sorted(word))
         
         # Check if the sorted word exists in the dictionary
-        if sorted_word in anagrams_map:
+        if sorted_word  in anagrams_map:
             # If exists, append the original word to the list of anagrams
             anagrams_map[sorted_word].append(word)
         else:
@@ -18,5 +18,5 @@ def group_anagrams(words):
     return list(anagrams_map.values())
 
 # Example usage:
-words = ["listen", "silent", "enlist", "heart", "earth", "hello", "world"]
+words = ["abba", "baba", "bbaa", "cd", "cd"]
 print(group_anagrams(words))
