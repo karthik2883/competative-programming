@@ -9,7 +9,7 @@ class Solution(object):
             frequency[c].append(n)
         res = []
         for i in range(len(frequency) - 1, 0, -1):
-            for n in frequency[i]:
+            for n in frequency[i]: 
                 res.append(n)
                 if len(res) == k:
                     return res
