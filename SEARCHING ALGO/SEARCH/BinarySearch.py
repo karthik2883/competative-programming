@@ -17,10 +17,12 @@
 
 def BinarySearch(arr, target):
     arr.sort()
+    l = []
     left, right = 0, len(arr) - 1
     while left <= right:
         mid = (left + right) // 2
         if arr[mid] == target:
+            print(mid)
             return mid
         elif arr[mid] > target:
             right = mid - 1
